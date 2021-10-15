@@ -26,7 +26,7 @@ podTemplate(label: '12-mall',
         stage('Build'){
             container('docker'){
                 script {
-                    appImage = docker.build("052937454741.dkr.ecr.ap-northeast-2.amazonaws.com/12st-user13-product"+"${env.JOB_NAME}")
+                    appImage = docker.build("052937454741.dkr.ecr.ap-northeast-2.amazonaws.com/"+"${env.JOB_NAME}")
                 }
             }
         }
